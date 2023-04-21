@@ -12,7 +12,8 @@ namespace GameSix
         // Foe Constructor
        public Foe(string name) 
        {
-        this.name = SetName();
+        GetName();
+        this.name = name;
         health = 100;
         shield = 0;
        }
@@ -46,15 +47,15 @@ namespace GameSix
         }
 
         // Method that gets health of Foe and returns it
-        public void GetHealth()
+        public float GetHealth()
         {
             return health;
         }
 
         // Method that gets shield value of Foe and returns it
-        public void GetShield()
+        public float GetShield()
         {
-            return shield();
+            return shield;
         }
 
         // Method to Set the name of Foe
