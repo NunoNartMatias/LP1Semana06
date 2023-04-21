@@ -6,7 +6,13 @@ namespace GameSix
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            // Tells the user to input the number of enemies he wants 
+            Console.WriteLine("Type how many enemies would you like to create");
+    
+            // Reads user input
+            int newFoe = Convert.ToInt32(Console.ReadLine());
+
+            Foe[] foes = newFoe[];
         }
     }
 }

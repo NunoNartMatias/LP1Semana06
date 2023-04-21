@@ -2,6 +2,15 @@ using System;
 
 namespace GameSix
 {
+        // PowerUps enumeration
+        enum PowerUp
+        {
+            //Health PowerUp
+            Health,
+            //Shield PowerUp
+            Shield
+        }
+
     public class Foe
     {
         // variables
@@ -62,6 +71,24 @@ namespace GameSix
         public void SetName(string newname)
         {
             name = newname;
+        }
+
+        /* Method that controls the values of foe health and shield
+        after a Power Up*/ 
+        public void PickupPowerUp(PowerUp pUp, float value)
+        {
+            switch (pUp)
+            {
+                case (PowerUp.Health):
+
+                health = Math.Min(health + value, 100f);
+                break;
+
+                case PowerUp.Shield:
+
+                shield = Math.Min(shield + value, 100f);
+                break;
+            }
         }
     }
 }
