@@ -12,7 +12,7 @@ namespace GameSix
         // Foe Constructor
        public Foe(string name) 
        {
-        this.name = name;
+        this.name = SetName();
         health = 100;
         shield = 0;
        }
@@ -43,6 +43,24 @@ namespace GameSix
                 in case the damage number was higher than the health one*/
                 if ( health < 0) health = 0;
             }
+        }
+
+        // Method that gets health of Foe and returns it
+        public void GetHealth()
+        {
+            return health;
+        }
+
+        // Method that gets shield value of Foe and returns it
+        public void GetShield()
+        {
+            return shield();
+        }
+
+        // Method to Set the name of Foe
+        public void SetName(string newname)
+        {
+            name = newname;
         }
     }
 }
